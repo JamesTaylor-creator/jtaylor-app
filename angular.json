@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "jtaylor-app"
+    }
+  },
+  "defaultProject": "jtaylor-app",
+  "cli": {
+    "analytics": false
+  }
 }

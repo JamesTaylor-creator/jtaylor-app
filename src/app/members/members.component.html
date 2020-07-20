@@ -1,0 +1,18 @@
+<div class='cards-container'>
+  <div class='searchbar'>
+    <input type='text' placeholder='Search by Name' [(ngModel)] ='search'>
+  </div>
+  <ng-container *ngFor='let person of members | search: search'>
+    <div class="member-container" (click)="setMemberProfile(person)" routerLink="/profile">
+      <div class="member-name">
+        Name: {{ person.name.first | uppercase}} {{person.name.last | uppercase}}
+      </div>
+      <div class="member-age">
+        Age: {{person.dob.age}}
+      </div>
+      <div class="pic">
+        <img src="{{ person.picture.medium }}" alt="" />
+      </div>
+    </div>
+  </ng-container>
+</div>
