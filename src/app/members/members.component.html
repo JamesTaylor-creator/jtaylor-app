@@ -2,17 +2,19 @@
   <div class='searchbar'>
     <input type='text' placeholder='Search by Name' [(ngModel)] ='search'>
   </div>
-  <ng-container *ngFor='let person of members | search: search'>
+  <ng-container *ngFor="let person of members | orderBy: 'dec' : 'name.last' : 'name.first' | search: search">
     <div class="member-container" (click)="setMemberProfile(person)" routerLink="/profile">
-      <div class="member-name">
-        Name: {{ person.name.first | uppercase}} {{person.name.last | uppercase}}
-      </div>
-      <div class="member-age">
-        Age: {{person.dob.age}}
-      </div>
       <div class="pic">
         <img src="{{ person.picture.medium }}" alt="" />
       </div>
+      <div class="member-name">
+        <p>Name: {{person.name.title}} {{person.name.first | titlecase}} {{ person.name.last | titlecase}}</p>
+      </div>
+      <div class="member-info">
+        <p>Age: {{person.dob.age}}</p>
+        <p>Cell: {{person.cell}}</p>
+        <p>Email: {{person.email | titlecase}} </p>
+      </div> 
     </div>
   </ng-container>
 </div>

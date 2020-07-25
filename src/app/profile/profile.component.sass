@@ -1,40 +1,44 @@
 .card 
-    margin: 10px
-    border: 1px solid black
+    grid-column: 2
+    grid-row:2
+    align-self: center
+    justify-self: center
+    padding: 10px
+    display: grid
+    background-color: #f7f7ee
+    grid-template-areas: 'pic-data'
+    grid-template-column: 12px auto
+    grid-row-gap: 10px
+    border-radius: 5px
+    box-shadow: #17706e
+.grid-container
+    padding: 10px
+    display: grid
+    grid-template-columns: 100px auto 100px
+    grid-template-row: 1fr 1fr 1fr
+    grid-row-gap: 10px
+    grid-column-gap: 10px
+    grid-template-areas: 'back-btn card'
+    background-color: #b6eb7a
 .cards-container 
     padding: 5px
     display: grid
     grid-template-columns: 1fr 1fr 1fr
     grid-column-gap: 10px
     grid-row-gap: 10px
-.searchbar 
+.back-btn
+    align-self: start
+    grid-column: 1
     grid-row: 1
-    grid-column: 1/4
-input 
-    width: 100%
-    max-width: 300px
-    padding: 8px 15px
-    background: rbga(50,50,50,0.2)
-    border: 0px solid #dbdbdb
-.member-container 
-    display: grid
-    grid-template-areas:'member-pic member-name member-age'
-    grid-template-columns: 48px 1fr auto
-    grid-column-gap: 15px
-    padding: 10px 15px
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3)
-    transition: 0.3s
-    background: white
+    max-width: 100px
+    margin: 10px
+    background-color: #fb7813 
+    border: none
+    color: white
+    padding: 15px 32px
+    text-align: center
+    text-decoration: none
+    display: inline-block
+    font-size: 16px
     border-radius: 5px
-.member-name 
-    text-align: left
-    align-self: center
-.member-age 
-    text-align: right
-    align-self: center
-.member-container:hover
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.3)
-.pic
-    align-self: center
-img 
-    border: 1px solid gray
+    margin: 0px
