@@ -11,6 +11,7 @@ import { ProfileService } from '../services/profile.service';
 export class MembersComponent implements OnInit {
 
   search = '';
+  age = '';
   members: any;
 
   constructor(private apiService: ApiService, private profileService: ProfileService){}
